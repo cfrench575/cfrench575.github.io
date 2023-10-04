@@ -4,6 +4,6 @@
 [submodule "themes/ananke"]
 	path = themes/ananke
 	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "themes/amethyst"]
-	path = themes/amethyst
-	url = https://github.com/theNewDynamic/gohugo-theme-amethyst.git
+[submodule "themes/hugo-tranquilpeak-theme"]
+	path = themes/hugo-tranquilpeak-theme
+	url = https://github.com/kakawait/hugo-tranquilpeak-theme.git
