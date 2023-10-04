@@ -1,7 +1,7 @@
 ---
 title: "Create a hybrid movie recommender using LightFM"
 date: 2023-07-13T22:07:32-04:00
-draft: true
+#draft: true
 ---
 
 In today's digital age where the abundance of information overwhelms consumers and users, recommendation algorithms play a crucial role in simplifying decision-making processes and enhancing user experiences. By analyzing vast amounts of data, these algorithms provide personalized and relevant suggestions which help users discover products, services, and content that align with their preferences and interests. From e-commerce platforms to streaming services and social media, recommendation algorithms have become an indispensable tool that offer tailored suggestions to keep users engaged, satisfied, and returning for more. There are two popular recommendation algorithms: user-based and content-based. 
