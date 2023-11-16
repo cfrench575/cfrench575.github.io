@@ -20,11 +20,11 @@ theme = 'hugo-tranquilpeak-theme'
 # ------
 [author]
   name = "Chelsea French"
-  bio = "I am an experienced Machine Learning Engineer with a master's degree in Neuroscience and a strong background in Python, SQL, and data analytics. I have built recommendation algorithms and implemented them in full-stack products, resulting in a significant increase in company revenue. I have managed internships, collaborated with cross-functional teams, and have experience in Tableau administration."
+  bio = "Experienced Machine Learning Engineer with a master's degree in Neuroscience and a strong background in Python, SQL, and data analytics."
   job = "Senior Data Scientist"
   location = "San Diego, California"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "thibaud.lepretre@gmail.com"
+  gravatarEmail = "cfrench575@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
@@ -76,16 +76,16 @@ theme = 'hugo-tranquilpeak-theme'
 [[menu.links]]
   weight = 2
   identifier = "stackoverflow"
-  name = "Stack Overflow"
-  pre = "<i class=\"sidebar-button-icon fab fa-lg fa-stack-overflow\" aria-hidden=\"true\"></i>"
-  url = "https://stackoverflow.com/users/636472/kakawait"
+  name = "Linkedin"
+  pre = "<i class=\"sidebar-button-icon fab fa-linkedin\" aria-hidden=\"true\"></i>"
+  url = "https://www.linkedin.com/in/cfrench575/"
 
 [[menu.misc]]
   weight = 1
   identifier = "rss"
-  name = "RSS"
+  name = "Tableau"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
-  url = "/index.xml"
+  url = "https://public.tableau.com/app/profile/chelsea2809/viz/covid_tracker/Overview"
 
 # -------------
 # Customization
