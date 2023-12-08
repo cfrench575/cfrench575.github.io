@@ -84,7 +84,7 @@ theme = 'hugo-tranquilpeak-theme'
   weight = 1
   identifier = "rss"
   name = "Tableau"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-rss\" aria-hidden=\"true\"></i>"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-table\" aria-hidden=\"true\"></i>"
   url = "https://public.tableau.com/app/profile/chelsea2809/viz/covid_tracker/Overview"
 
 # -------------
@@ -276,7 +276,6 @@ theme = 'hugo-tranquilpeak-theme'
     name = "Twitter"
     icon = "fab fa-twitter"
     url = "https://twitter.com/intent/tweet?text=%s"
-
 
 #  [[params.sharingOptions]]
 #    name = "Whatsapp"

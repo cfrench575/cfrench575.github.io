@@ -1,5 +1,5 @@
 ---
-title: "Create a Hybrid Movie Recommender Using LightFM in Python"
+title: "Create a Hybrid Movie Recommender Using LightFM With Python"
 date: 2023-07-13T22:07:32-04:00
 ---
 
@@ -60,12 +60,12 @@ movie_metadata = pd.read_csv('/content/drive/MyDrive/online learning/movierecs/d
 Prepare ratings, movieclub and movies data to be merged.
 
 ```python
-ratings=ratings[["userId", "movieId", "rating"]]
-movieclub=movieclub[["userId", "movieId", "rating"]].dropna() 
+ratings = ratings[["userId", "movieId", "rating"]]
+movieclub = movieclub[["userId", "movieId", "rating"]].dropna() 
 movieclub['movieId'] = movieclub['movieId'].astype(int)
 movieclub.head()
 
-movies=movie_metadata[['id', 'title']].dropna() 
+movies = movie_metadata[['id', 'title']].dropna() 
 movies = movies.rename(columns={'id': 'movieId'})
 movies['movieId'] = movies['movieId'].astype(int)
 movies.head()
@@ -75,7 +75,7 @@ Reformat dictionary keyword data so that each movie has a array of keywords. Mov
 ```python
 column_of_lists=[]
 for i in range(len(keywords)): 
-    row=keywords.loc[i, "keywords"]
+    row = keywords.loc[i, "keywords"]
     try:
         dictionaries = json.loads(row.replace("'", "\""))
         keyword_list=[]
@@ -105,13 +105,13 @@ Concatonate MovieLens data with friends' rating data. The movieLens data is very
 ### Michael   270903
 ### Katherine 270904
 
-ratings=pd.concat([ratings, movieclub], ignore_index=True)
+ratings = pd.concat([ratings, movieclub], ignore_index=True)
 ratings.reset_index(drop=True, inplace=True)
 
-movies_watched=list(movieclub.movieId.unique())
-movies_to_keep=movies_watched + [480]
+movies_watched = list(movieclub.movieId.unique())
+movies_to_keep = movies_watched + [480]
 
-movies=movies[movies.movieId.isin(movies_to_keep)]
+movies = movies[movies.movieId.isin(movies_to_keep)]
 movies.head()
 ```
 Also filter out unwatched movies from the keywords dataset.
@@ -121,7 +121,7 @@ keywords['word_array'] = keywords['word_array'].astype('str')
 keywords= keywords.replace('\[','', regex=True)
 keywords= keywords.replace('\]','', regex=True)
 
-keywords=keywords[keywords.movieId.isin(movies_to_keep)]
+keywords = keywords[keywords.movieId.isin(movies_to_keep)]
 ```
 Merge ratings, movies and keywords into a single dataframe.
 
@@ -154,7 +154,7 @@ for i in user_id:
     counter += 1
 
 ### item dictionary (movie id/ title)
-item_dict ={}
+item_dict = {}
 for i in range(data.shape[0]):
     item_dict[(data.loc[i,"movieId"])] = data.loc[i,"title"]
 
@@ -166,12 +166,12 @@ Plot keywords are reformatted into a sparse matrix. This matrix will be used to 
 def tokens(x):
     return x.split(', ')
                                                                                  
-item_features= data[["movieId", "word_array"]].drop_duplicates(["movieId", "word_array"]).reset_index(drop=True)
+item_features = data[["movieId", "word_array"]].drop_duplicates(["movieId", "word_array"]).reset_index(drop=True)
                                                                   
 from sklearn.feature_extraction.text import CountVectorizer
 cv=CountVectorizer(tokenizer=tokens, max_features = 100)
 
-item_features_csr=cv.fit_transform(item_features['word_array'])
+item_features_csr = cv.fit_transform(item_features['word_array'])
 ```
 
 #### LightFM Model
@@ -245,7 +245,7 @@ pickle.dump(interactions, open('interactions.pkl','wb'))
 item_representations=model.get_item_representations()
 pickle.dump(item_representations, open('item_representations.pkl','wb'))
 
-item_name_dict=cv.vocabulary_
+item_name_dict = cv.vocabulary_
 
 #### save dictionaries
 with open('item_name_dict.json', 'w') as fp:
