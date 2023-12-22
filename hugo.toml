@@ -44,24 +44,18 @@ theme = 'hugo-tranquilpeak-theme'
   url = "/"
 [[menu.main]]
   weight = 2
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-bookmark\" aria-hidden=\"true\"></i>"
-  url = "/categories"
-[[menu.main]]
-  weight = 3
   identifier = "tags"
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
   url = "/tags"
 [[menu.main]]
-  weight = 4
+  weight = 3
   identifier = "archives"
   name = "Archives"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
   url = "/archives"
 [[menu.main]]
-  weight = 5
+  weight = 4
   identifier = "about"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-question\" aria-hidden=\"true\"></i>"
@@ -75,14 +69,20 @@ theme = 'hugo-tranquilpeak-theme'
   url = "https://github.com/cfrench575/"
 [[menu.links]]
   weight = 2
-  identifier = "stackoverflow"
+  identifier = "linkedin"
   name = "Linkedin"
   pre = "<i class=\"sidebar-button-icon fab fa-linkedin\" aria-hidden=\"true\"></i>"
   url = "https://www.linkedin.com/in/cfrench575/"
+[[menu.links]]
+  weight = 3
+  identifier = "resume"
+  name = "Resume"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-file\" aria-hidden=\"true\"></i>"
+  url = "images/Chelsea_French_Resume.pdf"
 
 [[menu.misc]]
   weight = 1
-  identifier = "rss"
+  identifier = "tableau"
   name = "Tableau"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-table\" aria-hidden=\"true\"></i>"
   url = "https://public.tableau.com/app/profile/chelsea2809/viz/covid_tracker/Overview"

@@ -1,6 +1,15 @@
 ---
 title: "Create a Hybrid Movie Recommender Using LightFM With Python"
 date: 2023-07-13T22:07:32-04:00
+tags:
+- Machine Learning
+- Python
+- Recommendation Algorithms
+- Matrix Factorization
+- Hybrid Recommendations
+- Gradient Descent
+- Singular Value Decomposition
+- LightFM
 ---
 
 # Recommendation Algorithms: Background
