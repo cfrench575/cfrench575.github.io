@@ -22,7 +22,7 @@ With any algorithm, ensuring high quality data is the best way to improve accura
 Both collaborative and content filtering techniques have their own strengths and weaknesses; collaborative filtering is less effective when there is minimal user data (called the “cold start” problem), and content filtering is limited by the users existing preferences and also may require extensive domain knowledge.
 In practice it can be very useful to combine both content and collaborative filtering in a single algorithm as one technique can make up for the others’ shortcomings. LightFM is one such python package that makes it easy to create a hybrid recommendation algorithm that uses both content and user data
 
-# LightFM movie recommender in Python
+# LightFM Movie Recommender in Python
  LightFM is a popular python package for hybrid recommendation algorithms that incoporates implicit and explicit feedback. Both item and user metadata are used to calcuate traditional matrix factorization algorithms. Each user and item are represented as the sum of the latent representations of their features, allowing recommendations to generalise to new items (via item features) and to new users (via user features). 
  
  The following is a brief demo of the LightFM package that uses plot keywords, ratings and movie metadata from https://www.kaggle.com/rounakbanik/the-movies-dataset?select=movies_metadata which I combined with personal movie rating data gathered from friends (gathering data from your friends is completely normal).
