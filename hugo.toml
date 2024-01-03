@@ -48,12 +48,12 @@ theme = 'hugo-tranquilpeak-theme'
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-tags\" aria-hidden=\"true\"></i>"
   url = "/tags"
-[[menu.main]]
-  weight = 3
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
-  url = "/archives"
+#[[menu.main]]
+#  weight = 3
+#  identifier = "archives"
+#  name = "Archives"
+#  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-archive\" aria-hidden=\"true\"></i>"
+#  url = "/archives"
 [[menu.main]]
   weight = 4
   identifier = "about"
