@@ -15,7 +15,7 @@ thumbnailImage: https://img.freepik.com/free-vector/smart-retail-abstract-concep
 ---
 
 # Association Rule Learning: Background
-Association Rule Learning (also called **Market Basket Analysis**) is a practical and highly interpertable starting place for implementing the first recommendation algorithm for your business. Associaiton rules, or strong relationships between variables in a dataset, can be mined from historical data using an appropriate algorithm. Those rules can then be leveraged to effectively predict future user behavior. Association rules are commonly applied to assist with marketing decisions such as selecting users for a specific ad campaign, recommending personalized services, or smart product up-selling at checkout. 
+Association Rule Learning (also called **Market Basket Analysis**) is a practical and highly interpertable starting place for implementing the first recommendation algorithm for your business. Association rules, or strong relationships between variables in a dataset, can be mined from historical data using an appropriate algorithm. Those rules can then be leveraged to effectively predict future user behavior. Association rules are commonly applied to assist with marketing decisions such as selecting users for a specific ad campaign, recommending personalized services, or smart product up-selling at checkout. 
 
 {{< html >}}
 <br>
