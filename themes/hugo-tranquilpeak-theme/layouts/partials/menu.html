@@ -2,6 +2,8 @@
   <li class="sidebar-button">
     {{ if and (or (in .URL "://") (in .URL "mailto:") (in .URL "tel:") (in .URL "callto:") (in .URL "skype:")) (not (and $.root.Site.BaseURL (in .URL (printf "%s" $.root.Site.BaseURL)))) }}
       <a class="sidebar-button-link {{ if eq .Identifier "search" }}open-algolia-search{{ end }}" href="{{ .URL | safeURL }}" target="_blank" rel="noopener" title="{{ .Name }}">
+    {{ else if and (in .URL "Resume") (not (and $.root.Site.BaseURL (in .URL (printf "%s" $.root.Site.BaseURL)))) }}
+      <a class="sidebar-button-link {{ if eq .Identifier "search" }}open-algolia-search{{ end }}" href="{{ .URL | relLangURL }}" target="_blank" rel="noopener" title="{{ .Name }}">
     {{ else }}
       <a class="sidebar-button-link {{ if eq .Identifier "search" }}open-algolia-search{{ end }}" href="{{ .URL | relLangURL }}" title="{{ .Name }}">
     {{ end }}
@@ -11,3 +13,4 @@
     </a>
   </li>
 {{ end }}
+
