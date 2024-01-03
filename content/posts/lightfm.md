@@ -10,10 +10,37 @@ tags:
 - Gradient Descent
 - Singular Value Decomposition
 - LightFM
+# gallery:
+# - //d1u9biwaxjngwg.cloudfront.net/tag-plugins-showcase/car-31.jpg //d1u9biwaxjngwg.cloudfront.net/tag-plugins-showcase/car-31.jpg "Mercedes"
+# - //d1u9biwaxjngwg.cloudfront.net/tag-plugins-showcase/car-9.jpg //d1u9biwaxjngwg.cloudfront.
+autoThumbnailImage: false
+thumbnailImagePosition: "right"
+thumbnailImage: https://img.freepik.com/free-vector/blue-halftone-background_1035-3279.jpg?
+# Image by Harryarts on Freepik
+# coverImage:
+metaAlignment: center
 ---
 
 # Recommendation Algorithms: Background
   Popularized by Amazon in the 1990s, recommendation algorithms have become a staple of business analytics. From shopping add-ons to information sharing via contact the influence of recommendation algorithms is undeniable. Under the hood, recommendation algorithms use both implicit (i.e number of times the item is purchased) and explicit (i.e star ratings) user feedback to determine the strength of association for a recommendation. I want to first define two main types of recommendation algorithms; content-based vs collaborative filtering.
+
+{{< html >}}
+<br>
+{{< /html >}}
+
+- [Recommendation Algorithms: Background](#recommendation-algorithms-background)
+    - [Collaborative and Content Filtering](#collaborative-and-content-filter)
+    - [Matrix Factorization: SVD](#matrix-factorization-svd)
+    - [Gradient Descent](#gradient-descent)
+    - [Data Considerations](#data-considerations)
+- [LightFM Movie Recommender in Python](#lightfm-movie-recommender-in-python)
+    - [Load Data](#load-data)
+    - [Data Preparation](data-preparation)
+    - [LightFM Data Matricies](#lightfm-data-matricies)
+    - [LightFM Model](#lightfm-model)
+    - [LightFM Model Evaluation](#lightfm-model-evaluation)
+
+<!-- [![Tranquilpeak](/img/showcase.png)](https://tranquilpeak.kakawait.com) -->
 
 #### Collaborative and Content Filtering
  **Collaborative filtering** uses similar users to recommend new content. For example, a user who historically has enjoyed multiple similar films as you may also have rated highly additional movies that you have not yet discovered - those are the movies that would then be recommended to you.

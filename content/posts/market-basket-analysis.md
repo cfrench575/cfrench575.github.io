@@ -8,10 +8,33 @@ tags:
 - Machine Learning
 - Python
 - Recommendation Algorithms
+metaAlignment: center
+thumbnailImagePosition: "right"
+thumbnailImage: https://img.freepik.com/free-vector/smart-retail-abstract-concept-illustration_335657-3715.jpg?
+# Image by vectorjuice on Freepik
 ---
 
 # Association Rule Learning: Background
 Association Rule Learning (also called **Market Basket Analysis**) is a practical and highly interpertable starting place for implementing the first recommendation algorithm for your business. Associaiton rules, or strong relationships between variables in a dataset, can be mined from historical data using an appropriate algorithm. Those rules can then be leveraged to effectively predict future user behavior. Association rules are commonly applied to assist with marketing decisions such as selecting users for a specific ad campaign, recommending personalized services, or smart product up-selling at checkout. 
+
+{{< html >}}
+<br>
+{{< /html >}}
+
+- [Association Rule Learning: Background](#association-rule-learning-background)
+    - [Applications](#applications)
+    - [Apriori Algorithm](#apriori-algorithm)
+    - [Data Considerations](#data-considerations)
+- [Association Rule Recommender in Python using Mlxtend Python Package](#association-rule-recommender-in-python-using-mlxtend-python-package)
+    - [Load Data](#load-data)
+    - [Data Preparation](data-preparation)
+        - [One Hot Encoding](#one-hot-encoding)
+    - [Compute Frequent Item Sets using Ariori Algorithm](#compute-frequent-item-sets-using-ariori-algorithm)
+    - [Compute Association Metrics from Frequent Item Sets](#compute-association-metrics-from-frequent-item-sets)
+    - [Examine Association Rules](#examine-association-rules)
+- [Final Thoughts](#final-thoughts)
+    - [Networks of Association](#networks-of-association)
+    - [Further Applications](#further-applications)
 
 #### Applications
 While rules can be hard-coded using prerequisite knowledge, market basket analysis allows for automation which saves time and rules can adapt rapidly to changing customer bases. Additionally, algorithmically mining for rules doesn't require expert domain knowledge, as theoretically the necessary information should already exist in the data. **Market basket analysis** also enables the discovery of highly predictive, less intuitive rules that might otherwise be overlooked by a human; sometimes items frequently purchased together don't always seem similar enough to recommend together, for example, diapers and beer. 
@@ -123,20 +146,20 @@ rules.head()
 ```
 Association metrics are computed to describe the strenght/importance of the rule. A single metric in isolation can be misleading so it is good practice to evaualate the association rule using multiple metrics. Below is a brief explanation of each association metric. 
 
-* Support
+* **Support**
     * Number of transactions with shared items / total number of transactions
     * Frequently purchased items tend to have the highest support
-* Confidence
+* **Confidence**
     * Support of items X and Y / support of X
     * Captures probability that Y will be purchased is X is purchased; How does the proabaility of purchasing Y change once X is purchased. 
-* Lift
+* **Lift**
     * (Support of items X and Y) / (support of X * support of Y)
     * The proportion of transactions that contain X and Y divided by the proportion of transactions if X and Y were randomly and independently assigned. 
     * Evaluates the associations between items excluding association due to random chance
-* Conviction
+* **Conviction**
     * (Support X and Y) - (Support of X * Support of Y)
     * Similar to lift, but bounded between -1 and +1
-* Zhang’s metric
+* **Zhang’s metric**
     * (Degree of association - dissociation)  / max of two confidence measures (confidence of X then Y, confidence of not X then Y)
     * Dissociation metric bound between -1 and +1 with +1 indicating a perfect association
 
