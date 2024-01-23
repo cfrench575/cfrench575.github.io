@@ -12,6 +12,8 @@ tags:
 - Python
 - Pytorch
 - fastai
+- Flask
+- fly.io
 metaAlignment: center
 thumbnailImagePosition: "right"
 thumbnailImage: https://img.freepik.com/free-vector/head-with-ai-chip_78370-3672.jpg?
@@ -19,7 +21,7 @@ thumbnailImage: https://img.freepik.com/free-vector/head-with-ai-chip_78370-3672
 ---
 
 # Image Classification: Background
-Image classification is a widely used type of machine learning with numerous practical applications ranging from face recognition (security) to medical image analysis (diagnostic) to wildlife monitoring (conservation). **Convolutional neural networks** (CNNs) are frequently used for image classification, in part because of the easy-to-use and well-supported TensorFlow and PyTorch python packages. Additionally CNNs require very little data pre-processing (feature extraction is automated),making them an ideal choice for image classification problems. 
+Image classification is a widely used type of machine learning with numerous practical applications ranging from face recognition (security) to medical image analysis (diagnostic) to wildlife monitoring (conservation). **Convolutional neural networks** (CNNs) are frequently used for image classification, in part because of the easy-to-use and well-supported TensorFlow and PyTorch python packages. Additionally CNNs require very little data pre-processing (feature extraction is automated), making them an ideal choice for image classification problems. 
 
 {{< html >}}
 <br>
@@ -29,12 +31,12 @@ Image classification is a widely used type of machine learning with numerous pra
 - [Neural Network Overview](#neural-network-overview)
     - [Key Concepts](#key-concepts)
     - [Terms and Definitions](#terms-and-definitions)
-- [Convolutional Neural Network: An example Using Fastai (Pytorch)](#convolutional-neural-network-an-example-using-fastai-pytorch)
+- [Convolutional Neural Network: An Example Using Fastai (Pytorch)](#convolutional-neural-network-an-example-using-fastai-pytorch)
     - [Data Preparation](data-preparation)
     - [Model Evaluation](#model-evaluation)
     - [Test Model on New Data](#test-model-on-new-data)
 - [A Note About Tensors](#a-note-about-tensors)
-- [Final Thoughts](#final-thoughts)
+- [Final Thoughts: Deploy as a Web Application](#final-thoughts-deploy-as-a-web-application)
 
 # Neural Network Overview
 As the name suggests, neural network computational models are inspired by the way biological neural networks function in the human brain, specifically the connectivity patterns of neurons in the visual cortex.  A neural network learns to map input data to output predictions by adjusting the weights and biases through a training process, specifically feeding data forward through the network, evaluating the prediction's error, and iteratively refining the network's parameters to improve performance.
@@ -66,7 +68,7 @@ The **architecture** of the CNN model consists of an input layer, one or more hi
     - Once trained, the neural network can make predictions or classifications on new, unseen data (test data). During this inference phase, the network utilizes the learned weights and biases to process input and produce output.
 
 
-# Convolutional Neural Network: An example Using Fastai (Pytorch)
+# Convolutional Neural Network: An Example Using Fastai (Pytorch)
 The following example is from the fastbook online course which uses fastai and pytorch. The entire course can be found here https://github.com/fastai/fastbook. 
 
 {{< html >}}
@@ -269,8 +271,16 @@ A tensor is the *data structure* used for convolutional neural networks (the inp
 
 The tensor then undergoes a dimensionalty reduction process (**pooling**), is **flattened** into 1D array that passes through one or more fully connected layers where features are extracted to the desired output classes. The final tensor  represents the network's prediction scores (and probability) for each class. As seen in the example above, the predicted class is the one with the highest probability.
 
-# Final Thoughts
+# Final Thoughts: Deploy as a Web Application
 In summary, augmented/resized training data obtained from Bing search engine can be used with the fastai python package to create a simple and effective convolution neural network for image classification. 
+
+While code for the neural network is sufficient for accessing and validating the model, it may be helpful to demonstrate the efficacy of the model in a simple user interface - this will allow others to easily test the model and potentially assist with prototyping. Python's [flask](https://flask.palletsprojects.com/en/3.0.x/) package is a fast and simple way to create a web application where others will be able to use your image classification model, and can be deployed for free using [fly.io](https://fly.io/docs/languages-and-frameworks/python/). 
+
+Visit this [link](https://cnn-sevenwonders-app.fly.dev/) to test out the convolutional neural network created using the above code from this article. See the full code for the Flask application in this [github repo](https://github.com/cfrench575/cnn_sevenwonders_app).
+
+{{< html >}}
+<br>
+{{< /html >}}
 
 The citation for the above example provided here: 
 

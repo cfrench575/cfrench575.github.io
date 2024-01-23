@@ -87,6 +87,13 @@ theme = 'hugo-tranquilpeak-theme'
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-table\" aria-hidden=\"true\"></i>"
   url = "https://public.tableau.com/app/profile/chelsea2809/viz/covid_tracker/Overview"
 
+  [[menu.misc]]
+  weight = 2
+  identifier = "imageclassifier"
+  name = "Image Classifier"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-brain\" aria-hidden=\"true\"></i>"
+  url = "https://cnn-sevenwonders-app.fly.dev/"
+
 # -------------
 # Customization
 # -------------
