@@ -40,7 +40,7 @@ This article will discuss the skills and concepts necessary to programmatically 
     - [Data Structures](#data-structures)
     - [List Comprehension](#list=comprehension)
     - [Object Oriented Programming](#object-oriented-programming)
-- [Applied Examples with tableau_rest](#applied-examples-with-tableau-rest)
+- [Applied Examples with tableau_rest](#applied-examples-with-tableau_rest)
 - [Further Applications](#further-applications)
 
 # Tableau Administration Basics

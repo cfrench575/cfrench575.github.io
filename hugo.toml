@@ -87,12 +87,19 @@ theme = 'hugo-tranquilpeak-theme'
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-table\" aria-hidden=\"true\"></i>"
   url = "https://public.tableau.com/app/profile/chelsea2809/viz/covid_tracker/Overview"
 
-  [[menu.misc]]
+[[menu.misc]]
   weight = 2
   identifier = "imageclassifier"
   name = "Image Classifier"
   pre = "<i class=\"sidebar-button-icon fas fa-lg fa-brain\" aria-hidden=\"true\"></i>"
   url = "https://cnn-sevenwonders-app.fly.dev/"
+
+[[menu.misc]]
+  weight = 3
+  identifier = "anatomyofasong"
+  name = "Music Model"
+  pre = "<i class=\"sidebar-button-icon fas fa-lg fa-music\" aria-hidden=\"true\"></i>"
+  url = "https://anatomyofasong.fly.dev/"
 
 # -------------
 # Customization
