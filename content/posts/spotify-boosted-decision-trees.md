@@ -60,8 +60,8 @@ Common types of supervised learning models include:
     - Primarily used for binary classification tasks, where the output variable has two possible outcomes. Applications include spam detection, disease diagnosis, and credit risk assessment.
 - *Decision Trees*:
     - These models partition the feature space into regions and make predictions based on the majority class or average value within each region. They're used in various applications, including customer segmentation, fraud detection, and medical diagnosis.
-- *Boosting*:
-    <!-- - An **ensemble learning** method that combines multiple decision trees to improve predictive performance and reduce overfitting. Common applications include recommendation systems, financial forecasting, and image classification. -->
+<!-- - *Boosting*:
+    - An **ensemble learning** method that combines multiple decision trees to improve predictive performance and reduce overfitting. Common applications include recommendation systems, financial forecasting, and image classification. -->
 - *Support Vector Machines (SVM)*:
     - Used for both classification and regression tasks by finding the hyperplane that best separates the classes or fits the regression line. Applications include text classification, image recognition, and medical diagnosis.
 - *Naive Bayes*:
