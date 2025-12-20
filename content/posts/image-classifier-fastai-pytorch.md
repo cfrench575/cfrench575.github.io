@@ -42,7 +42,7 @@ Image classification is a widely used type of machine learning with numerous pra
 As the name suggests, neural network computational models are inspired by the way biological neural networks function in the human brain, specifically the connectivity patterns of neurons in the visual cortex.  A neural network learns to map input data to output predictions by adjusting the weights and biases through a training process, specifically feeding data forward through the network, evaluating the prediction's error, and iteratively refining the network's parameters to improve performance.
 
 #### Key Concepts 
-There a several key concepts that give a neural network its ability to learn and predict. First, weights (also called **parameters**) are assigned and automatically tested against a true value (actuals or **labels**). Additionally, there is an automated way to use the error (**loss**) between the weight performance (**predictions**) and the actual values (**labels**) to change the weights and improve accuracy. 
+There a several key concepts that give a neural network its ability to learn and predict. First, weights (also called **parameters**) are assigned and automatically tested against a true value (actuals or **labels**). The error (**loss**) between the weight performance (**predictions**) and the actual values (**labels**) is calculated to iteratively test the weights/parameters, allowing for the selection of weights that yield the highest accuracy. 
 
 The **architecture** of the CNN model consists of an input layer, one or more hidden layers, and an output layer; the input layer receives the initial data (**independent variable**), the hidden layers process information, and the output layer produces the final result (**predictions**). Model performance is evaluated based on **loss**, or how well the model output (**predictions**) match up with the correct **labels** (also called **target** or **dependent variable**).
 
@@ -61,7 +61,7 @@ The **architecture** of the CNN model consists of an input layer, one or more hi
 - *Loss Function*:
     - The output of the neural network is compared to the true or expected output using a **loss function**. The loss function quantifies the difference between the predicted and actual values.
 - *Backpropagation*:
-    - **Backpropagation** is the training process where the network learns from its mistakes. The gradient of the loss with respect to the network's **weights** and **biases** is computed, and the weights and biases are adjusted to minimize the **loss**. This process is typically performed using optimization algorithms like **gradient descent**.
+    - **Backpropagation** is the training process where the network learns from its mistakes. The gradient of the loss with respect to the network's **weights** and **biases** is computed, and the weights and biases are continuously adjusted to minimize the **loss**. This process is typically performed using optimization algorithms like **gradient descent**.
 - *Training and Iteration*:
     - The neural network iteratively goes through the **feedforward** and **backpropagation** processes on the training data until it converges to a state where the **loss** is minimized. This process allows the network to learn the underlying patterns and relationships in the data.
 - *Testing and Inference*:
@@ -87,7 +87,7 @@ APIKEY='xxx'
 key = os.environ.get('AZURE_SEARCH_KEY', APIKEY)
 ```
 #### Data Preparation
-Get training data from bing image search, save images in folder named for label.
+Get training data from a Bing image search, save images in folder named for label.
 ```python
 wonder_types = 'Christ the Redeemer','Machu Picchu','Taj Mahal', 'Petra', 'Chichen Itza', 'Great Wall of China', 'Roman Colosseum'
 path = Path('wonders')
@@ -265,7 +265,7 @@ learn_inf.dls.vocab
 # A Note About Tensors
 A **tensor** is a type of multimathematical representation of an object that obeys certain rules during transformation that make them useful for storing and predicting multilinear relationships.
 
-Tensor dimensionality can be described using **rank**. Tensors of rank 0 is simply a number, a rank 2 tensor is a vector, a rank 3 tensor is a 2 dimensional matrix and a rank 4 tensor is now a 3 dimensional object; tensors can be different multidimensional geometric shapes and this allows them to store information about multilinear relationships. 
+Tensor dimensionality can be described using **rank**. A tensor of rank 0 is simply a number, a rank 2 tensor is a vector, a rank 3 tensor is a 2 dimensional matrix and a rank 4 tensor is now a 3 dimensional object; tensors can be different multidimensional geometric shapes and this allows them to store information about complex multilinear relationships. 
 
 A tensor is the *data structure* used for convolutional neural networks (the input of a CNN is an image represented as a tensor, as is the output). Tensors in a CNN flow through the network, transforming from input tensors representing raw data to output tensors providing predictions. The input tensor is transformed through **convolutional layers** with the application of filters and feature extraction (called feature or activation maps), and **activation layers** (e.g., ReLU), such that the spatial and feature information of the input is retained.
 
@@ -276,7 +276,7 @@ In summary, augmented/resized training data obtained from Bing search engine can
 
 While code for the neural network is sufficient for accessing and validating the model, it may be helpful to demonstrate the efficacy of the model in a simple user interface - this will allow others to easily test the model and potentially assist with prototyping. Python's [flask](https://flask.palletsprojects.com/en/3.0.x/) package is a fast and simple way to create a web application where others will be able to use your image classification model, and can be deployed for free using [fly.io](https://fly.io/docs/languages-and-frameworks/python/). 
 
-Visit this [link](https://cnn-sevenwonders-app.fly.dev/) to test out the convolutional neural network created using the above code from this article. See the full code for the Flask application in this [github repo](https://github.com/cfrench575/cnn_sevenwonders_app).
+Visit this [link](https://cnn-sevenwonders-app.fly.dev/) to test out the convolutional neural network created using the above code from this article (please allow about 30 seconds for the model to load). See the full code for the Flask application in this [github repo](https://github.com/cfrench575/cnn_sevenwonders_app).
 
 {{< html >}}
 <br>
